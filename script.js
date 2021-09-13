@@ -11,14 +11,8 @@ function conversor(){
     impuestoGanancias = pesosIngresados * 0.35;
     valorTotal = parseFloat (pesosIngresados) + parseFloat (impuestoPais) + parseFloat (impuestoGanancias); //valor que abona con la suma de los impuestos.
 
-    let input = document.getElementById('pesos').addEventListener("input", function () {
-        let num = +this.value, max = 10, min = 1;
-        if (num > max || num < min) {
-            return false;
-          }
-    })
-
-
+    
+    
 
     if(resultado>6000)
     {
@@ -33,3 +27,14 @@ function conversor(){
     }
 
 }
+
+function imposeMinMax(el){
+    if(el.value != ""){
+      if(parseInt(el.value) < parseInt(el.min)){
+        el.value = el.min;
+      }
+      if(parseInt(el.value) > parseInt(el.max)){
+        el.value = el.max;
+      }
+    }
+  }

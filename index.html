@@ -15,10 +15,9 @@
     <div class="contenidos">
         
         <label>Monto:</label>
-        <input id="pesos" type="number" min="1" max="10" placeholder="Monto en Pesos" value="pesos">
+     <input id="pesos" type=number min=1 max=9999999999 placeholder="Monto en Pesos" onkeyup=imposeMinMax(this)>
         
-        
-        <button onclick="conversor()">
+       <button onclick="conversor()">
             Convertir a Dolares
         </button>
             
