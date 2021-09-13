@@ -1,6 +1,6 @@
 function conversor(){
     let pesosIngresados = document.getElementById("pesos").value;
-    let dolarHoy = 102.5;
+    let dolarHoy = 97.25;
     let impuestoPais;
     let impuestoGanancias;
     let valorTotal;
@@ -11,19 +11,25 @@ function conversor(){
     impuestoGanancias = pesosIngresados * 0.35;
     valorTotal = parseFloat (pesosIngresados) + parseFloat (impuestoPais) + parseFloat (impuestoGanancias); //valor que abona con la suma de los impuestos.
 
-    if(resultado <= 0)
-    {
-        alert('Error. Ingrese un monto mayor a cero: ');
+    let input = document.getElementById('pesos').addEventListener("input", function () {
+        let num = +this.value, max = 10, min = 1;
+        if (num > max || num < min) {
+            return false;
+          }
+    })
 
-    } else if (resultado>6000){
+
+
+    if(resultado>6000)
+    {
         
         alert('No se puede convertir un monto superior a 6000 dólares');
 
     }
     else
     {
-       alert('$ ' + Math.round (pesosIngresados) + ' pesos argentinos son U$S  ' + Math.round (resultado) + '\n' + 
-       'El impuesto país es de: $' + Math.round(impuestoPais) + '\n' + 'Las retenciones son de $  ' + Math.round (impuestoGanancias) + '\n' + 'El total a pagar por U$S:  ' + Math.round (resultado) + ' es de $ ' + Math.round (valorTotal));
+       alert('$' + pesosIngresados + ' pesos argentinos son U$S' + resultado.toFixed(3) + '\n' + 
+       'El impuesto país es de: $' + impuestoPais.toFixed(2) + '\n' + 'El recargo impositivo es de: $' + impuestoGanancias.toFixed(2) + '\n' + 'El total a pagar por U$S' + resultado.toFixed(2) + ' es de $' + valorTotal.toFixed(2));
     }
 
 }

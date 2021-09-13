@@ -3,35 +3,62 @@ body{
     margin:0;
     padding:0;
     font-size: 20px;
-    background:url(background.jpg);
+    background:url(re.jpg);
+   
 }
 
 h1{
-    background: #5E8B7E;
+    text-align: center;
+    text-shadow: 0.05em 0.05em rgb(253, 255, 254);
     margin: 0 0 30px 0;
     padding: 10px;
-    color:#ffffff;
+    color: #059700;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 input{
     display:block;
+    width: 200px;
     margin: 10px 0;
     height: 30px;
-    color:#666;
+    color: grey;
+    border-radius: 7px;
+
 }
 
 .contenidos{
     padding: 30px;
     background:rgba(0,0,0,.7);
-    border: solid 1px silver;
+    border: solid 1px #059700;
     width: 300px;
     margin:auto;
     border-radius: 10px;
-    color:#fff;
+    color:grey;
 }
 label{
-    font-size: 25px
+    font-size: 25px;
 }
+
+button{  
+   background-image: linear-gradient(to right, #52c234 0%, #061700  51%, #52c234  100%)
+    }
 button{
-    padding: 8px;
-    width:265px;
+    margin: 2px;
+    padding: 10px 35px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
 }
+
+button:hover {
+background-position: right center; /* change the direction of the change here */
+color: #fff;
+text-decoration: none;
+}
+    
+
+
