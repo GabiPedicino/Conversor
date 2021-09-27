@@ -23,7 +23,6 @@ input{
     height: 30px;
     color: grey;
     border-radius: 7px;
-
 }
 
 .contenidos{
@@ -59,6 +58,50 @@ background-position: right center; /* change the direction of the change here */
 color: #fff;
 text-decoration: none;
 }
-    
 
+
+/*segundo convertidor*/
+
+input{
+    display:block;
+    width: 200px;
+    margin: 10px 0;
+    height: 30px;
+    color: grey;
+    border-radius: 7px;
+}
+
+.contenidos-dos{
+    padding: 30px;
+    background:rgba(0,0,0,.7);
+    border: solid 1px #059700;
+    width: 300px;
+    margin:auto;
+    border-radius: 10px;
+    color:grey;
+}
+label{
+    font-size: 25px;
+}
+
+button{  
+   background-image: linear-gradient(to right, #52c234 0%, #061700  51%, #52c234  100%)
+    }
+button{
+    margin: 2px;
+    padding: 10px 35px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+button:hover {
+background-position: right center; /* change the direction of the change here */
+color: #fff;
+text-decoration: none;
+}
 

@@ -10,20 +10,40 @@
     </head>
 <body>
     
+
     <h1>Convertidor de Pesos a Dolares</h1>
     
     <div class="contenidos">
         
         <label>Monto:</label>
-     <input id="pesos" type=number min=1 max=9999999999 placeholder="Monto en Pesos" onkeyup=imposeMinMax(this)>
+            <input id="pesos" type="number" min="1" max="9999999999" placeholder="Monto en Pesos" onkeyup=imposeMinMax(this)>
         
        <button onclick="conversor()">
-            Convertir a Dolares
+            Convertir a Dólares
         </button>
+
+        <button onclick="limpiarMonto()">Limpiar</button>
             
+    </div>
+
+    <div>
+        <h1>Convertidor de Dólares a Pesos</h1>
+    
+        <div class="contenidos-dos">
+            
+            
+            <label>Monto:</label>
+                <input id="dolar" type="number" min="1" max="9999999999" placeholder="Monto en Dólares" onkeyup=imposeMinMax(this)>
+            
+                <button onclick="dolarAPesos()">
+                    Convertir a Pesos
+                </button>
+                <button onclick="limpiar()">Limpiar</button>
+        </div>
     </div>
  
 <script src="script.js"></script>
+<script src="scriptdos.js"></script>
 </body>
 
 </html
