@@ -11,14 +11,14 @@
 <body>
     
 
-    <h1>Convertidor de Pesos a Dolares</h1>
+    <h1>Convertidor de Pesos a Dólares</h1>
     
     <div class="contenidos">
         
         <label>Monto:</label>
             <input id="pesos" type="number" min="1" max="9999999999" placeholder="Monto en Pesos" onkeyup=imposeMinMax(this)>
         
-       <button onclick="conversor()">
+       <button id="btn-pesos" onclick="conversor()">
             Convertir a Dólares
         </button>
 
@@ -35,7 +35,7 @@
             <label>Monto:</label>
                 <input id="dolar" type="number" min="1" max="9999999999" placeholder="Monto en Dólares" onkeyup=imposeMinMax(this)>
             
-                <button onclick="dolarAPesos()">
+                <button id="btn-dolares" onclick="dolarAPesos()">
                     Convertir a Pesos
                 </button>
                 <button onclick="limpiar()">Limpiar</button>
