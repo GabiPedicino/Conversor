@@ -1,6 +1,6 @@
 function conversor(){
     let pesosIngresados = document.getElementById("pesos").value;
-    let dolarHoy = 97.75;
+    let dolarHoy = 100.51;
     let impuestoPais;
     let impuestoGanancias;
     let valorTotal;
