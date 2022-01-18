@@ -1,6 +1,6 @@
 function dolarAPesos(){
     let dolarIngresado = parseFloat(document.getElementById("dolar").value);
-    let dolarHoyDos = 100.51;
+    let dolarHoyDos = 209.00;
     let resultadoDos;
     let impuestoPaisDos;
     let impuestoGananciasDos;
