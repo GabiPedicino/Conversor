@@ -3,9 +3,16 @@ body{
     margin:0;
     padding:0;
     font-size: 20px;
-    background:url(dolares.jfif);
+    background-color: #D3D3D3;
     background-size: cover;
    
+}
+
+.valor-dolar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
 }
 
 h1{
@@ -13,7 +20,7 @@ h1{
     text-shadow: 0.05em 0.05em rgb(51, 122, 87);
     margin: 0 0 30px 0;
     padding: 10px;
-    color: #e2e6e1;
+    color: #889a83;
     margin-left: 300px;
     margin-right: 300px;
 }
@@ -117,6 +124,6 @@ text-decoration: none;
 
 p{
     font-size: small;
-    color: #FFFFFF;
+    color: #061700;
     
 }
