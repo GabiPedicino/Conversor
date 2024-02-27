@@ -69,5 +69,5 @@ const limpiarMonto = () => {
 }
 
 const limpiar = () =>{
-  document.getElementById("dolar"), value = "";
+  document.getElementById("dolar").value = "";
 }
