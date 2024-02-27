@@ -1,56 +1,54 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Convertidor</title>
-        <link href="normalize.css" rel="stylesheet" >
-        <link href="base.css" rel="stylesheet" >
-        
-    </head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="normalize.css" rel="stylesheet">
+  <link href="base.css" rel="stylesheet">
+ 
+  <!--ICONOS DE BOOTSTRAP-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <title>Convertidor</title>
+</head>
 <body>
-    <!--
-    <div class="valor-dolar">
-        <div><iframe style="width:320px;height:260px;border-radius:10px;box-shadow:2px 4px 4px rgb(0 0 0 / 25%);display:flex;justify-content:center;border:1px solid #bcbcbc" src="https://dolarhoy.com/i/cotizaciones/dolar-blue" frameborder="0"></iframe></div>
-        <div class="valor-oficial">
-            <div><iframe style="width:320px;height:260px;border-radius:10px;box-shadow:2px 4px 4px rgb(0 0 0 / 25%);display:flex;justify-content:center;border:1px solid #bcbcbc" src="https://dolarhoy.com/i/cotizaciones/dolar-bancos-y-casas-de-cambio" frameborder="0"></iframe></div>
-        </div>
-    </div>-->
-
-    <h1>Convertidor de Pesos a Dólares:</h1>
+    <h1>Conversor de Pesos a Dólares:</h1>
     
     <div class="contenidos">
-        
         <label>Monto:</label>
-            <input id="pesos" type="number" min="1" max="9999999999" placeholder="Monto en Pesos" onkeyup=imposeMinMax(this)>
-        
-       <button id="btn-pesos" onclick="conversor()">
-            Convertir a Dólares
-        </button>
-
+        <input id="pesos" type="number" min="1" max="9999999999" placeholder="Monto en Pesos">
+        <button id="btn-pesos" onclick="pesosADolar()">Convertir a Dólares</button>
         <button onclick="limpiarMonto()">Limpiar</button>
-            
+        <p class="aclaracion">*La cotización del dólar obtenido es el promedio de la compra y de la venta.</p>
     </div>
 
     <div>
-        <h1>Convertidor de Dólares a Pesos:</h1>
+        <h1>Conversor de Dólares a Pesos:</h1>
     
         <div class="contenidos-dos">
-            
-            
             <label>Monto:</label>
-                <input id="dolar" type="number" min="1" max="9999999999" placeholder="Monto en Dólares" onkeyup=imposeMinMax(this)>
-            
-                <button id="btn-dolares" onclick="dolarAPesos()">
-                    Convertir a Pesos
-                </button>
-                <button onclick="limpiar()">Limpiar</button>
+            <input id="dolar" type="number" min="1" max="9999999999" placeholder="Monto en Dólares">
+            <button id="btn-dolares" onclick="dolarAPesos()">Convertir a Pesos</button>
+            <button onclick="limpiar()">Limpiar</button>
+            <p class="aclaracion">*La cotización del dólar obtenido es el promedio de la compra y de la venta.</p>
         </div>
     </div>
 
-    <p>Página creada por Gabi 🙂</p>
- 
-<script src="script.js"></script>
-<script src="scriptdos.js"></script>
-</body>
 
-</html
+
+
+    <p class="aclaracion">Página creada por Gabi  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+        <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5"/>
+      </svg>
+      <br>
+      <a href="https://dolarapi.com/docs/" target="_blank" rel="noopener noreferrer">Fuente: dolarapi.com</a>
+      
+    </p>
+  
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

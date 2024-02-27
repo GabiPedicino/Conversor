@@ -4,7 +4,7 @@ body{
     padding:0;
     font-size: 20px;
     background-color: #D3D3D3;
-    background-size: cover;
+    
    
 }
 
@@ -47,7 +47,7 @@ label{
 }
 
 button{  
-   background-image: linear-gradient(to right, #409629 0%, #061700  51%, #308a17  100%)
+   background-image: linear-gradient(to right, #409629 0%, #061700  51%, #308a17  100%);
 }
 
 button{
@@ -60,8 +60,7 @@ button{
     box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     display: block;
-    outline: 2px solid  #059700;
-    outline-offset: 2px;
+  
     border: none;
 }
 
@@ -71,6 +70,17 @@ button:hover{
     text-decoration: none;
 }
 
+.aclaracion{
+    font-size: small;
+
+    color: #FFF;
+}
+
+a{
+    text-decoration: none;
+    color: #FFF;
+    
+}
 
 /*segundo convertidor*/
 
@@ -99,8 +109,9 @@ label{
 }
 
 button{  
-   background-image: linear-gradient(to right, #52c234 0%, #061700  51%, #52c234  100%)
-    }
+   background-image: linear-gradient(to right, #52c234 0%, #061700  51%, #52c234  100%);
+}
+
 button{
     margin: 2px;
     padding: 10px 35px;
@@ -111,19 +122,12 @@ button{
     box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     display: block;
-    outline: 2px solid  #158012;
-    outline-offset: 2px;
     border: none;
 }
 
 button:hover {
-background-position: right center; 
-color: #fff;
-text-decoration: none;
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
 }
 
-p{
-    font-size: small;
-    color: #061700;
-    
-}
