@@ -1,3 +1,4 @@
+
 const pesosADolar = () => {
   let pesosIngresados = parseFloat(document.getElementById("pesos").value);
   console.log("Pesos ingresados:", pesosIngresados);
@@ -23,12 +24,16 @@ const pesosADolar = () => {
         throw new Error('El valor del dólar obtenido de la API no es un número válido.');
       }
       let cotizacion = (dolarHoy + dolarHoyVenta) / 2; 
-      let valorTotal = pesosIngresados / cotizacion;     
-      alert("Cotizacion dólar: U$S " + cotizacion + '\n' + "Pesos ingresados: $ " + pesosIngresados + '\n' + "Recibirá: U$S " + valorTotal.toFixed(2));
-    })
+      let valorTotal = pesosIngresados / cotizacion; 
+      const contenidoHTML = ` 
+        <p>Cotización dólar: U$S ${cotizacion.toFixed(2)}</p>
+        <p>Pesos ingresados: $ ${pesosIngresados}</p>
+        <p>Recibirá: U$S ${valorTotal.toFixed(2)}</p>
+      `;
+      document.getElementById('modal-peso-dolar').innerHTML = contenidoHTML; 
+    })  
     .catch(error => console.error('Error al obtener el valor del dólar', error));
 }
-
 
 
 const dolarAPesos = () => {
@@ -47,6 +52,7 @@ const dolarAPesos = () => {
       }
       return response.json();
     })
+    
     .then(data => {
       console.log("Datos de la API:", data);
       let dolarHoy = parseFloat(data.compra);
@@ -57,12 +63,16 @@ const dolarAPesos = () => {
         throw new Error('El valor del dólar obtenido de la API no es un número válido.');
       }
       let cotDolar = (dolarHoy + dolarHoyVenta) / 2;
-      let resultado = dolaresIngresados * cotDolar;
-      alert("Cotizacion dólar: U$S " + cotDolar + '\n' + "Dólares ingresados: U$S " + dolaresIngresados + '\n' + "Recibirá: $ " + resultado.toFixed(2));
-    })
+      let resultado = (dolaresIngresados * cotDolar);
+      const contenido_HTML = ` 
+      <p>Cotización dólar: U$S ${cotDolar.toFixed(2)}</p>
+      <p>Dólares ingresados: U$S ${dolaresIngresados}</p>
+      <p>Recibirá: $ ${resultado.toFixed(2)}</p>
+    `;
+      document.getElementById('modal-dolar-peso').innerHTML = contenido_HTML;       
+    }) 
     .catch(error => console.error('Error al obtener el valor del dólar:', error));
 }
-
 
 const limpiarMonto = () => {
   document.getElementById("pesos").value = "";
